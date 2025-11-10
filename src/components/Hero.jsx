@@ -6,11 +6,11 @@ const Hero = () => {
       <div className="hero-content">
         <div className="hero-text">
           <h1 className="hero-title">
-            Hi, I'm <span className="highlight">Adarsh Mishra </span>
+            Hi, I&apos;m <span className="highlight">Adarsh Mishra </span>
           </h1>
-          <p className="hero-subtitle">Full Stack Developer & Creative Problem Solver</p>
+          <p className="hero-subtitle">Front End Developer & Published Researcher</p>
           <p className="hero-description">
-            I craft elegant digital experiences with modern technologies
+            I specialize in transforming ideas into responsive, user-friendly web solutions.
           </p>
           <div className="hero-buttons">
             <button className="btn btn-primary" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>

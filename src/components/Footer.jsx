@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <p className="footer-text">
-          &copy; {new Date().getFullYear()} Your Name. All rights reserved.
+          &copy; {new Date().getFullYear()} Adarsh Mishra. All rights reserved.
         </p>
         <p className="footer-subtext">Built with React & modern CSS</p>
       </div>

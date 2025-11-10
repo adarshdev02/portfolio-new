@@ -27,29 +27,28 @@ const Contact = () => {
         <h2 className="section-title">Get In Touch</h2>
         <div className="contact-content">
           <div className="contact-info">
-            <h3 className="contact-subtitle">Let's work together</h3>
+            <h3 className="contact-subtitle">Let&apos;s work together</h3>
             <p className="contact-text">
-              Have a project in mind? I'd love to hear about it. Send me a message and
-              I'll get back to you as soon as possible.
+              Have a project in mind? I&apos;d love to hear about it. Send me a message and
+              I&apos;ll get back to you as soon as possible.
             </p>
             <div className="contact-details">
               <div className="contact-item">
                 <span className="contact-icon">📧</span>
-                <span>email@example.com</span>
+                <span>iamadarsh.dev@gmail.com</span>
               </div>
               <div className="contact-item">
                 <span className="contact-icon">📱</span>
-                <span>+1 (555) 123-4567</span>
+                <span>+919305909187</span>
               </div>
               <div className="contact-item">
                 <span className="contact-icon">📍</span>
-                <span>Your City, Country</span>
+                <span>Nagpur, India</span>
               </div>
             </div>
             <div className="social-links">
-              <a href="#" className="social-link">GitHub</a>
-              <a href="#" className="social-link">LinkedIn</a>
-              <a href="#" className="social-link">Twitter</a>
+              <a href="https://github.com/adarshdev02" className="social-link">GitHub</a>
+              <a href="https://www.linkedin.com/in/adarsh-mishra-dev/" className="social-link">LinkedIn</a>
             </div>
           </div>
           <form className="contact-form" onSubmit={handleSubmit}>

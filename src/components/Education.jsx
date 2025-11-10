@@ -3,28 +3,18 @@ import './Education.css';
 const Education = () => {
   const educationData = [
     {
-      degree: 'Bachelor of Science in Computer Science',
-      institution: 'University of Technology',
-      year: '2020 - 2024',
+      degree: "Master's of Computer Applications",
+      institution: 'Lovely Professional University',
+      year: '2025 - 2027',
       status: 'Currently Pursuing',
-      gpa: '3.8/4.0',
-      details: 'Specializing in Web Development and Software Engineering'
+
     },
     {
-      degree: 'Diploma in Information Technology',
-      institution: 'Tech Institute',
-      year: '2018 - 2020',
+      degree: 'Bachelor of Computer Applications',
+      institution: 'GH Raisoni College of Engineering & Technology',
+      year: '2022 - 2025',
       status: 'Completed',
-      gpa: '3.9/4.0',
-      details: 'Foundation in programming and database management'
-    },
-    {
-      degree: 'High School Certificate',
-      institution: 'Central Public School',
-      year: '2016 - 2018',
-      status: 'Completed',
-      gpa: '92%',
-      details: 'Science and Mathematics specialization'
+
     }
   ];
 

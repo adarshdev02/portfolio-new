@@ -3,41 +3,33 @@ import './Projects.css';
 const Projects = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-featured online shopping platform with payment integration',
-      tags: ['React', 'Node.js', 'MongoDB'],
-      link: '#'
+      title: 'E-Certificate Generator',
+      description: 'A tool for generating e-certificates',
+      tags: ['Html', 'CSS', 'React', 'Node.js', 'MongoDB'],
+      image: 'https://i.ibb.co/FLQ7Rs1t/Screenshot-2025-11-11-015339.png',
+      link: 'https://certificate-generator-orpin.vercel.app/'
     },
     {
-      title: 'Task Management App',
-      description: 'Collaborative task management tool with real-time updates',
-      tags: ['React', 'Firebase', 'Material-UI'],
-      link: '#'
+      title: 'Research Paper on Enhancing Emotional Resilience',
+      description: 'A research paper exploring strategies to enhance emotional resilience in individuals.',
+      tags: ['Research', 'Psychology'],
+      image: 'https://i.ibb.co/PvBr0Q3W/Screenshot-2025-11-11-015744.png',
+      link: 'https://www.ijtsrd.com/papers/ijtsrd75003.pdf'
     },
     {
-      title: 'Portfolio Website',
-      description: 'Modern portfolio template with theme switching capabilities',
-      tags: ['React', 'CSS3', 'Vite'],
-      link: '#'
+      title: 'Lifeline',
+      description: 'A web-based mental health support system offering self-help tools, and emergency assistance.',
+      tags: ['HTML', 'CSS', 'Javascript', 'Bootstrap', 'Mysql', 'PHP MyAdmin'],
+      image: 'https://i.ibb.co/Mxf3CP81/Screenshot-2025-11-11-015626.png',
+
     },
     {
-      title: 'Weather Dashboard',
-      description: 'Real-time weather information with beautiful visualizations',
-      tags: ['React', 'API', 'Charts.js'],
-      link: '#'
+      title: 'Google Drive Clone',
+      description: 'Clone of Google Drive',
+      tags: ['HTML', 'CSS'],
+      image: 'https://i.ibb.co/RGTSbr1f/Screenshot-2025-11-11-015036.png',
+      link: 'https://ybnmzv.csb.app/'
     },
-    {
-      title: 'Social Media App',
-      description: 'Social networking platform with messaging and posts',
-      tags: ['React', 'Express', 'PostgreSQL'],
-      link: '#'
-    },
-    {
-      title: 'Blog Platform',
-      description: 'Content management system for bloggers and writers',
-      tags: ['React', 'Next.js', 'Markdown'],
-      link: '#'
-    }
   ];
 
   return (
@@ -47,7 +39,13 @@ const Projects = () => {
         <div className="projects-grid">
           {projects.map((project, index) => (
             <div key={index} className="project-card">
-              <div className="project-image"></div>
+              <div className="project-image">
+                {project.image ? (
+                  <img src={project.image} alt={`${project.title} screenshot`} />
+                ) : (
+                  <div className="project-image-placeholder">Image coming soon</div>
+                )}
+              </div>
               <div className="project-content">
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-description">{project.description}</p>
@@ -56,7 +54,7 @@ const Projects = () => {
                     <span key={idx} className="tag">{tag}</span>
                   ))}
                 </div>
-                <a href={project.link} className="project-link">View Project →</a>
+                {project.link && <a href={project.link} className="project-link">View Project →</a>}
               </div>
             </div>
           ))}

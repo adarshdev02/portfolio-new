@@ -8,32 +8,18 @@ const About = () => {
         <div className="about-content">
           <div className="about-text">
             <p className="about-paragraph">
-              I'm a passionate developer with a keen eye for design and a love for creating
-              seamless user experiences. With expertise in modern web technologies, I transform
-              ideas into elegant, functional solutions.
+             I&apos;m an enthusiastic front-end developer with a passion for design and a focus on creating clean, responsive, and user-friendly websites. Skilled in HTML, CSS, and SQL, I enjoy turning ideas into simple yet elegant digital experiences.
             </p>
             <p className="about-paragraph">
-              My journey in web development started with a curiosity for how things work on the
-              web, and has evolved into a career dedicated to crafting beautiful, performant
-              applications that make a difference.
+              My journey began with curiosity about how websites come to life, and it’s grown into a commitment to building creative, accessible, and meaningful web solutions that make a difference.
             </p>
-            <div className="about-stats">
-              <div className="stat-item">
-                <div className="stat-number">5+</div>
-                <div className="stat-label">Years Experience</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-number">50+</div>
-                <div className="stat-label">Projects Completed</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-number">30+</div>
-                <div className="stat-label">Happy Clients</div>
-              </div>
+            
+            <div className="about-stats-placeholder" aria-hidden="true" />
             </div>
-          </div>
           <div className="about-image">
-            <div className="image-placeholder"></div>
+            <div className="image-placeholder">
+                           <img src="https://i.ibb.co/PzDj5yvP/me3.png" alt="About Me" />
+            </div>
           </div>
         </div>
       </div>

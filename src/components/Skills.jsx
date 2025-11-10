@@ -1,26 +1,26 @@
 import './Skills.css';
+import PropTypes from 'prop-types';
 
 const Skills = () => {
   const skillsData = {
-    technical: [
-      { name: 'React', level: 90 },
-      { name: 'JavaScript', level: 95 },
-      { name: 'TypeScript', level: 85 },
-      { name: 'CSS3', level: 90 },
-      { name: 'HTML5', level: 95 },
-      { name: 'Node.js', level: 85 },
-      { name: 'Express', level: 80 },
-      { name: 'PostgreSQL', level: 75 }
-    ],
+    technical: {
+      'Front End': [
+        { name: 'HTML', level: 70 },
+        { name: 'CSS', level: 50 },
+
+      ],
+      'Backend': [
+        { name: 'SQL', level: 60 },
+      ],
+      'Others': [
+        { name: 'Github', level: 80 },
+        { name: 'Vercel', level: 70 },
+        { name: 'Canva', level: 65 }
+      ]
+    },
     soft: [
-      { name: 'Communication', level: 90 },
-      { name: 'Problem Solving', level: 95 },
+      { name: 'Communication', level: 60 },
       { name: 'Team Collaboration', level: 88 },
-      { name: 'Leadership', level: 82 },
-      { name: 'Time Management', level: 85 },
-      { name: 'Adaptability', level: 90 },
-      { name: 'Critical Thinking', level: 92 },
-      { name: 'Creativity', level: 88 }
     ]
   };
 
@@ -32,7 +32,6 @@ const Skills = () => {
           <div key={index} className="skill-item">
             <div className="skill-header">
               <span className="skill-name">{skill.name}</span>
-              <span className="skill-percentage">{skill.level}%</span>
             </div>
             <div className="skill-bar">
               <div
@@ -45,13 +44,46 @@ const Skills = () => {
       </div>
     </div>
   );
+    SkillCategory.propTypes = {
+      title: PropTypes.string.isRequired,
+      skills: PropTypes.arrayOf(
+        PropTypes.shape({
+          name: PropTypes.string.isRequired,
+          level: PropTypes.number.isRequired
+        })
+      ).isRequired
+    };
 
   return (
     <section id="skills" className="skills">
       <div className="container">
         <h2 className="section-title">Skills & Expertise</h2>
         <div className="skills-container">
-          <SkillCategory title="Technical Skills" skills={skillsData.technical} />
+          <div className="skill-category">
+            <h3 className="category-title">Technical Skills</h3>
+            <div className="technical-grid">
+              {Object.entries(skillsData.technical).map(([subTitle, skills]) => (
+                <div key={subTitle} className="technical-subcategory">
+                  <h4 className="subcategory-title">{subTitle}</h4>
+                  <div className="skills-list">
+                    {skills.map((skill, index) => (
+                      <div key={index} className="skill-item">
+                        <div className="skill-header">
+                          <span className="skill-name">{skill.name}</span>
+                        </div>
+                        <div className="skill-bar">
+                          <div
+                            className="skill-progress"
+                            style={{ width: `${skill.level}%` }}
+                          ></div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
           <SkillCategory title="Soft Skills" skills={skillsData.soft} />
         </div>
       </div>

@@ -8,7 +8,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
 }
 
 .about-text {
@@ -26,6 +26,11 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  margin-top: 3rem;
+}
+
+.about-stats-placeholder {
+  min-height: 140px;
   margin-top: 3rem;
 }
 
@@ -56,33 +61,29 @@
 }
 
 .about-image {
-  animation: fadeInRight 0.8s ease;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image-placeholder {
   width: 100%;
-  height: 400px;
-  background: var(--card-gradient);
+  max-width: 500px;
+  height: 450px;
   border-radius: 20px;
-  box-shadow: var(--shadow-lg);
   position: relative;
   overflow: hidden;
+  margin: 0 auto;
 }
 
-.image-placeholder::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    45deg,
-    transparent 30%,
-    rgba(255, 255, 255, 0.1) 50%,
-    transparent 70%
-  );
-  animation: shimmer 3s infinite;
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: inherit;
+  display: block;
 }
 
 @keyframes fadeInLeft {
