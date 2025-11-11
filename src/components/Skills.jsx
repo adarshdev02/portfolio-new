@@ -10,7 +10,7 @@ const Skills = () => {
 
       ],
       'Backend': [
-        { name: 'SQL', level: 60 },
+        { name: 'SQL', level: 35 },
       ],
       'Others': [
         { name: 'Github', level: 80 },
